@@ -15,31 +15,21 @@ function Products({products}){
             {products.map((prod)=>(<Product product = {prod} carousel={1} key={prod.id}></Product>))}
         </div>
 
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-            <span class="sr-only">Previous</span>
+        <a className="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span className="glyphicon glyphicon-chevron-left"></span>
+            <span className="sr-only">Previous</span>
         </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-            <span class="sr-only">Next</span>
+        <a className="right carousel-control" href="#myCarousel" data-slide="next">
+            <span className="glyphicon glyphicon-chevron-right"></span>
+            <span className="sr-only">Next</span>
         </a>
     </div>
 
-    <div class="trending-wrapper">
+    <div className="trending-wrapper">
         <h3>Trending products</h3>
         <div>
             {products.map((prod)=>(<Product product = {prod} carousel={0} key={prod.id}></Product>))}
         </div>
-        {/* @foreach($products as $product)
-        <div class="trending-item">
-            <a href="detail/{{$product['id']}}">
-                <img class="trending-image" src="{{$product['gallery']}}"/>
-                <div class="">
-                    <h4>{{$product['name']}}</h4>
-                </div>
-            </a>
-        </div>
-        @endforeach */}
     </div>
 </div>
         </>

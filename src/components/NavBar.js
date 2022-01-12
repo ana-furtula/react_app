@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom';
+
 function NavBar({productNum}){
     return(
 <nav className ="navbar navbar-default">
@@ -9,15 +11,14 @@ function NavBar({productNum}){
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
             </button>
-            <a className="navbar-brand" href="/">Home</a>
+            <ul className="nav navbar-nav">
+                <li style={{fontSize:25}}><Link to={"/"}>Shop</Link></li>
+            </ul>
         </div>
 
         <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul className="nav navbar-nav">
-                <li><a href="#">Orders</a></li>
-            </ul>
             <ul className="nav navbar-nav navbar-right">
-                <li><a href="/cartlist">Cart({productNum})</a></li>
+                <li><Link to={"/cartlist"}>Cart({productNum})</Link></li>
                 
             </ul>
         </div>
