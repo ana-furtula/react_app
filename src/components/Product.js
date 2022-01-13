@@ -9,7 +9,7 @@ function Product({ product, carousel }) {
         <div className={name}>
           <Link to={{ pathname:"/details/" + product.id }}>
             <img className="slider-img" src={product.gallery} />
-            <div className="carousel-caption">
+            <div className="carousel-caption" style={{backgroundColor: "grey", opacity: '40%'}}>
               <h3>{product.title}</h3>
               <p>{product.description}</p>
             </div>
