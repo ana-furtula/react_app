@@ -1,12 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useState } from "react";
+import {Link} from 'react-router-dom';
 
-function handleSubmit(event, productId, quantity) {
-  event.preventDefault();
-  console.log(productId + " " + quantity);
-}
-
-function Details({ products }) {
+function Details({ products, onProductAdded }) {
   const { id } = useParams();
   let product = products[0];
   const [quantity, setQuantity] = useState(1);
@@ -14,6 +10,13 @@ function Details({ products }) {
   products.forEach((element) => {
     element.id == id ? (product = element) : (product = product);
   });
+
+  function handleSubmit(event, product, quantity) {
+    event.preventDefault();
+    alert("Product successfully added to cart!");
+    onProductAdded(product, quantity);
+    // console.log(productId + " " + quantity);
+  }
 
   function handleInputChange(event) {
     event.preventDefault();
@@ -25,9 +28,7 @@ function Details({ products }) {
   return (
     <div className="container">
       <div className="row">
-        <a href="/">
-          <h4>Go back</h4>
-        </a>
+        <Link to={"/"}>Go back</Link>
       </div>
       <div className="row">
         <div className="col-sm-6">
@@ -49,7 +50,7 @@ function Details({ products }) {
           </h4>
           <br />
           <br />
-          <form onSubmit={(e) => handleSubmit(e, product.id, quantity)}>
+          <form onSubmit={(e) => handleSubmit(e, product, quantity)}>
             <h4>
               <label>Quantity: </label>
               <input type="number" min="1" onChange={handleInputChange} />
@@ -65,17 +66,6 @@ function Details({ products }) {
           <br />
           <br />
         </div>
-
-        {/* <div className="col-sm-6">
-          {products.map((product) => {
-            return product.id === id ? (
-              <OneProductDetail product = {product} key={product.id}></OneProductDetail>
-            ) : (
-              <></>
-            );
-          })}
-          
-        </div> */}
       </div>
     </div>
   );

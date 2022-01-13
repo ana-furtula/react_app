@@ -7,13 +7,13 @@ function Product({ product, carousel }) {
     <>
       {carousel === 1 ? (
         <div className={name}>
-          <a href="/">
+          <Link to={{ pathname:"/details/" + product.id }}>
             <img className="slider-img" src={product.gallery} />
             <div className="carousel-caption">
               <h3>{product.title}</h3>
               <p>{product.description}</p>
             </div>
-          </a>
+            </Link>
         </div>
       ) : (
         <div className="trending-item">
