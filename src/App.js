@@ -16,7 +16,7 @@ function App() {
       gallery:
         "https://thegoodguys.sirv.com/products/50070239/50070239_712265.PNG?scale.height=505&scale.width=773&canvas.height=505&canvas.width=773&canvas.opacity=0&q=90",
       description:
-        "Chocolate is a food made from cacao beans. It is used in many desserts like pudding, cakes and candy",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nesciunt culpa perferendis. Distinctio nobis pariatur deleniti quisquam molestiae corrupti corporis, ipsum quaerat nesciunt sed amet sint cum totam assumenda asperiores!",
       price: 600,
       category: "fridge",
     },
@@ -26,7 +26,7 @@ function App() {
       gallery:
         "https://images.samsung.com/is/image/samsung/rs-uhdtv-nu7100-ue43nu7192uxxh-frontblack-101551769?$684_547_PNG$",
       description:
-        "Lollipops are available in a number of colors and flavors, particularly fruit flavors.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nesciunt culpa perferendis. Distinctio nobis pariatur deleniti quisquam molestiae corrupti corporis, ipsum quaerat nesciunt sed amet sint cum totam assumenda asperiores!",
       price: 400,
       category: "tv",
     },
@@ -36,7 +36,7 @@ function App() {
       gallery:
         "https://5.imimg.com/data5/NT/UC/WR/SELLER-82975943/samsung-galaxy-a7-a750-mobile-phone-500x500.jpg",
       description:
-        "Ice cream is a sweetened frozen food typically eaten as a snack or dessert.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nesciunt culpa perferendis. Distinctio nobis pariatur deleniti quisquam molestiae corrupti corporis, ipsum quaerat nesciunt sed amet sint cum totam assumenda asperiores!",
       price: 200,
       category: "phone",
     },
@@ -46,7 +46,7 @@ function App() {
       gallery:
         "https://macola.rs/wp-content/uploads/2021/09/iphone-12-pro-blue-hero-423x500.png",
       description:
-        "Chocolate is a food made from cacao beans. It is used in many desserts like pudding, cakes and candy",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nesciunt culpa perferendis. Distinctio nobis pariatur deleniti quisquam molestiae corrupti corporis, ipsum quaerat nesciunt sed amet sint cum totam assumenda asperiores!",
       price: 550,
       category: "phone",
     },
@@ -56,7 +56,7 @@ function App() {
       gallery:
         "https://www.mytrendyphone.rs/images/Waterproof-Smartwatch-with-Heart-Rate-K12-IP68-Bluetooth-4-Black-10092020-01A-p.jpg",
       description:
-        "Lollipops are available in a number of colors and flavors, particularly fruit flavors.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nesciunt culpa perferendis. Distinctio nobis pariatur deleniti quisquam molestiae corrupti corporis, ipsum quaerat nesciunt sed amet sint cum totam assumenda asperiores!",
       price: 300,
       category: "tv",
     },
@@ -66,7 +66,7 @@ function App() {
       gallery:
         "https://www.tehnomanija.rs/UserFiles/products/2019/008/large/138734.webp",
       description:
-        "Ice cream is a sweetened frozen food typically eaten as a snack or dessert.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nesciunt culpa perferendis. Distinctio nobis pariatur deleniti quisquam molestiae corrupti corporis, ipsum quaerat nesciunt sed amet sint cum totam assumenda asperiores!",
       price: 700,
       category: "laptop",
     },
