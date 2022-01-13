@@ -1,15 +1,17 @@
-import { useState } from "react";
-
-function Cart({ products, removeFromCart, orderProducts}) {
+function Cart({ products, removeFromCart, orderProducts }) {
   function removeProductFromCart(event, product) {
     event.preventDefault();
     removeFromCart(product);
   }
 
-  function handleOrderProducts(event){
-      event.preventDefault();
+  function handleOrderProducts(event) {
+    event.preventDefault();
+    if (products[0]) {
       orderProducts();
       alert("You have successfully ordered products.");
+    } else{
+      alert("No products in your cart.");
+    }
   }
 
   return (
@@ -44,9 +46,7 @@ function Cart({ products, removeFromCart, orderProducts}) {
         ))}
       </div>
       <div>
-        <button onClick={handleOrderProducts}>
-          Order now
-        </button>
+        <button onClick={handleOrderProducts}>Order now</button>
       </div>
     </div>
   );

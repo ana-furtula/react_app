@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import { useState } from "react";
@@ -6,6 +5,7 @@ import Products from "./components/Products";
 import Details from "./components/Details";
 import Cart from "./components/Cart";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import $ from "jquery";
 
 function App() {
   const [productNum, setProductNum] = useState(0);
@@ -75,8 +75,8 @@ function App() {
   const [productsForCart, setProductsForCart] = useState([]);
 
   function onProductAdded(product, quantity) {
+    console.log("quantity " + quantity);
     setProductNum(productNum + 1);
-    console.log(product.id + " " + quantity);
     const cartItem = {
       id: product.id,
       title: product.title,
@@ -85,7 +85,12 @@ function App() {
       gallery: product.gallery,
       amount: quantity,
     };
-    setProductsForCart((arr) => [...arr, cartItem]);
+    productsForCart.forEach((el)=>{
+      el.id==product.id? el.amount =  parseInt(el.amount) + parseInt(quantity): el.amount = el.amount;
+    });
+
+    productsForCart.some(item => product.id == item.id)?console.log("a"):setProductsForCart((arr) => [...arr, cartItem]);
+
   }
 
   function removeFromCart(product) {
